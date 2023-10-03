@@ -35,13 +35,16 @@ $randomisednumber = rand(0,count($authorquote) - 1 );
 $my_quote = $_POST['my_quote'];
 
 if ($my_quote == true) {
-    $author = $_POST['author'];
+    $author = isset($_POST['author']) ? $_POST['author'] : "";
 
-    $quote = $_POST['quote'];
+    $quote = isset($_POST['quote']) ? $_POST['quote'] : "";
 
-    $output = '"' . $quote . '" - ' .$author;
+    if (!empty($author) and !empty($quote)) {
+        $output = '"' . $quote . '" - ' .$author;
+    } else {
+        $output = "Please fill in both Author name and inspirational quote.";
+    }
 
-    // Try to continue with array_push() and make existing array try to research how to continue with this
    
 } else {
     $author = $authorquote[$randomisednumber]['author'];
@@ -51,8 +54,8 @@ $quote = $authorquote[$randomisednumber]['quote'];
 $output = '"' . $quote . '" - ' .$author;
 }
 
-var_dump(isset($author));
-var_dump(isset($quote));
+// var_dump(isset($author));
+// var_dump(isset($quote));
 ?>
 
 
