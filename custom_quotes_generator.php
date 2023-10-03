@@ -39,33 +39,6 @@ if ($my_quote == true) {
 
     $quote = $_POST['quote'];
 
-    $authorquote = [
-        [
-            'author' => 'Ludwig van Beethoven',
-            'quote' => 'Art! Who comprehends her? With whom can one consult concerning this great goddess?'
-        ],
-        [
-            'author' => 'Nelson Mandela',
-            'quote' => 'The greatest glory in living lies not in never falling, but in rising every time we fall.'
-        ],
-        [
-            'author' => 'Steve Jobs',
-            'quote' => "Your time is limited, so don't waste it living someone else's life. Don't
-            be trapped by dogma – which is living with the results of other
-            people's thinking."
-        ],
-        [
-            'author' => 'Walt Disney',
-            'quote' => "The way to get started is to quit talking and begin doing."
-        ],
-        [
-            'author' => 'Eleanor Roosevelt',
-            'quote' => "If life were predictable it would cease to be life, and be without flavor."
-        ]
-    
-    
-    ];
-
     $output = '"' . $quote . '" - ' .$author;
 
     // Try to continue with array_push() and make existing array try to research how to continue with this
